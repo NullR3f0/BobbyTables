@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <ItemGroup>
+    <ProjectReference Include="..\BobbyTables.Application\BobbyTables.Application.csproj" />
+    <ProjectReference Include="..\BobbyTables.Infrastructure\BobbyTables.Infrastructure.csproj" />
+    <ProjectReference Include="..\BobbyTables.Shared\BobbyTables.Shared.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+</Project>

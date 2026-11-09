@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/BobbyTables.Api/BobbyTables.Api.csproj" />
+    <Project Path="src/BobbyTables.Application/BobbyTables.Application.csproj" />
+    <Project Path="src/BobbyTables.Domain/BobbyTables.Domain.csproj" />
+    <Project Path="src/BobbyTables.Infrastructure/BobbyTables.Infrastructure.csproj" />
+    <Project Path="src/BobbyTables.Shared/BobbyTables.Shared.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/BobbyTables.Api.IntegrationTests/BobbyTables.Api.IntegrationTests.csproj" />
+    <Project Path="tests/BobbyTables.Application.Tests/BobbyTables.Application.Tests.csproj" />
+    <Project Path="tests/BobbyTables.Domain.Tests/BobbyTables.Domain.Tests.csproj" />
+  </Folder>
+</Solution>
