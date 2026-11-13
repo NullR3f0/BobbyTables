@@ -1,4 +1,3 @@
-[Si karta tematu szablon.md](https://github.com/user-attachments/files/33116963/Si.karta.tematu.szablon.md)
 **Grupa:** L3 (niestacjonarna) **Data zgłoszenia: 06.10.2026**
 
 ---
@@ -19,49 +18,54 @@
 
 ## 3. Problem
 
-_Co system ma robić i dla kogo. Opis sytuacji, nie nazwy technologii. 3–5 zdań._
+Aplikacja która otrzymuje od klienta żądanie HTTP z payloadem do weryfikacji. Wytrenowany model ma za zadanie zweryfikować czy otrzymany payload zawiera malicious code w postaci próby SQL injection lub XSS attack, czy jest jednak czysty. Przydatne dla usług, które korzystają z UGC i wymagają sanityzacji inputów, a chcą zezwolić na custom HTML lub inne powiązane funkcjonalności.
 
 ## 4. Dlaczego zwykły algorytm nie wystarczy
 
 _Wskażcie jeden z trzech powodów omawianych na zajęciach i uzasadnijcie:_
 
-- [ X ] reguł jest za dużo i zmieniają się w czasie
+- [x] reguł jest za dużo i zmieniają się w czasie
 
 _Uzasadnienie, 2–3 zdania:_
 
-Sposobów wykonywania ataków XSS i SQL Injection są setki tysięcy. Syntax za pomocą którego można wykonać atak XSS jest zbyt szeroki - mogą to być eventy onmouseenter, mountujące się na starcie tagi video z autoplayem, który wywołuje malicious code itd.
+Wariantów ataków XSS i SQL injection są setki tysięcy, a składnia, którą da się je wykonać, jest bardzo szeroka. Atrybuty typu `onmouseenter`, tagi `<video>` z autoplayem uruchamiającym złośliwy kod, kodowanie znaków i komentarze w zapytaniach SQL.
+Lista regexów lub warunków if nigdy nie będzie kompletna i trzeba ją stale aktualizować.
 
-Zakres jest zbyt duży by móc to zweryfikować zwykłym regexem lub ifami/strategiami.
+Model SI natomiast uczy się wzorców z oznaczonych przykładów, więc nowe warianty będziemy musieli dodawać tylko jako dane treningowe, a nie pisać nowe reguły.
 
 ## 5. Technologia SI
 
 - [ ] sieć neuronowa
-- [ X ] system ekspertowy / wnioskowanie regułowe
+- [ ] system ekspertowy / wnioskowanie regułowe
 - [ ] algorytm genetyczny
-- [ ] klasyczne uczenie maszynowe
+- [x] klasyczne uczenie maszynowe
 - [ ] inne:
 
 _Dlaczego akurat ta technologia pasuje do tego problemu, 2–3 zdania:_
-Do rozpoznawania ataków SQL i XSS jest potrzebna ekspercka znajomość tematu oraz wnioskowania regułowego.
-Reguł w rozpoznawaniu ataków jest zbyt dużo, aby móc to zapisać w inny sposób. Algorytm genetyczny odpada całkowicie, a klasyczne uczenie może patrzeć zbyt płytko.
+
+W zbiorach z Kaggle'a mamy tysiące oznaczonych przykładów na bazie atak/czysty, a payloady wysyłane przez userów również będą tekstem, więc nasz problem to klasyfikacja tekstu z nadzorem. Reguł w rozpoznawaniu ataków jest zbyt dużo, aby móc je zapisywać i rozszerzać ręcznie przez system ekspertowy. Algorytm genetyczny odpada całkowicie. Klasyczne ML dobrze wpasuje się tu również ze względu na n-gramy znaków i regresję logistyczną.
+N-gramy pozwolą na wyłapywanie popularnych wektorów ataku takich jak `' or1=1`.
 
 ## 6. Dane
 
 |                      |                         |
 | -------------------- | ----------------------- |
-| Źródło               | https://www.kaggle.com/ |
+| Źródło SQLi              | [dataset na kaggle ~31k wierszy](https://www.kaggle.com/datasets/sajid576/sql-injection-dataset)  |
+| Źródło XSS              | [dataset na kaggle ~14k wierszy](https://www.kaggle.com/datasets/syedsaqlainhussain/cross-site-scripting-xss-dataset-for-deep-learning)  |
 | Rozmiar i format     | .csv                    |
 | Czy są już dostępne? | tak                     |
 
 ## 7. Stos technologiczny
 
-- Python, Sci-Kit, Pandas
-- .NET, Tensorflow .NET
+- Python, Sci-Kit, Pandas, FastAPI
+- .NET
 - Docker
 
 ## 8. Kryterium sukcesu
 
-Lepsza detekcja niż baseline Regex
+Chcemy by na zbiorze testowym recall na atakach wynosił >= 95%, a odsetek false-positive'ów maksymalnie 1%.
+Celujemy też, aby recall był co najmniej o 10 punktów procentowych wyższy niż baseline regex.
+Punktem odniesienia będą typowe regexy na wzorce ataków pokroju `or1=1`, `<script on>` itd.
 
 ## 9. Zakres minimalny
 
@@ -74,7 +78,7 @@ API wołające wytrenowany model, próbujący wykrywać ataki XSS/SQL injection 
 
 ## 11. Repozytorium
 
-_Link:_
+_Link:_ https://github.com/NullR3f0/BobbyTables
 
 ## 12. Główne ryzyko i plan awaryjny
 
