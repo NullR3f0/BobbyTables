@@ -9,3 +9,7 @@ W następnym tygodniu zrobię: Trenowanie modelu, eksperymenty na modelu, API .N
 
 Blokuje nas: nic
 Zobowiązanie zespołu na następny sprint: wytrenowanie modelu, wnioski
+
+[Cyprian Tomczak]
+Zrobiłem: napisałem funkcję normalizuj w ml/normalizacja.py. Posłuży ona jako preprocesor przy uczeniu w SciKit
+W następnym tygodniu zrobię: Trenowanie modelu, testy
