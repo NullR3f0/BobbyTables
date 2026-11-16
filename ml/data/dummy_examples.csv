@@ -1,0 +1,15 @@
+payload,label,typ
+' or 1=1 --,1,sqli
+1' union select username; password from users --,1,sqli
+admin' --,1,sqli
+1; drop table users,1,sqli
+<script>alert(1)</script>,1,xss
+<img src=x onerror=alert(1)>,1,xss
+<svg onload=alert(document.cookie)>,1,xss
+%3Cscript%3Ealert(1)%3C/script%3E,1,xss
+Sprzedam rower w dobrym stanie,0,czysty
+<b>Nowy</b> telefon; gwarancja 2 lata,0,czysty
+select the best option,0,czysty
+Union Square apartment,0,czysty
+Jan Kowalski,0,czysty
+<p>Opis aukcji</p>,0,czysty
