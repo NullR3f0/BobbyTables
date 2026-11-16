@@ -1,0 +1,11 @@
+=== Sprint 09.11–16.11 ===
+Zobowiązanie z poprzedniego sprintu: Zobowiązaniem było wytrenowanie modelu. Pobawiliśmy się trochę z SciKitem lokalnie, ale pliki związane z naszym projektem dopiero utworzymy.
+
+[Stanisław Kręgielski]
+Zrobiłem: założyłem strukturę katalogów API w .NET (api/), dodałem szkielet klas domen,
+uzupełniłem kartę projektu zgodnie z uwagami (opis problemu, zmiana technologii na klasyczne ML z uzasadnieniem, źródła danych, kryterium sukcesu), 
+założyłem projekt Pythona w ml/ i napisałem skrypt przygotuj_dane.py, testy w pytest (m.in. brak wspólnych payloadów między train i test)
+W następnym tygodniu zrobię: Trenowanie modelu, eksperymenty na modelu, API .NET
+
+Blokuje nas: nic
+Zobowiązanie zespołu na następny sprint: wytrenowanie modelu, wnioski
