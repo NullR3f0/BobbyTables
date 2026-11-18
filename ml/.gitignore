@@ -1,6 +1,7 @@
 data/raw/
 data/processed/
 models/
+results/grid_search.csv
 results/statystyki_danych.json
 results/errors_*.csv
 __pycache__/
