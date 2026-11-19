@@ -32,3 +32,4 @@ DOCELOWY_RECALL = 0.95       # min. 95% wykrytych ataków
 PRZEWAGA_NAD_BASELINE = 0.10  # recall min. o 10 pp. wyższy niż regex
 
 DLUGOSC_PAYLOADU = 500 # Dłuższe payloady chunkujemy
+DLUGOSC_OKNA = 500 # Dłuższe okna chunkujemy
