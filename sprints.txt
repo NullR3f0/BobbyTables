@@ -23,3 +23,6 @@ W następnym tygodniu zrobię: ewaluację na zbiorze testowym
 [Stanisław Kręgielski]
 Zrobiłem: zrobiłem review i zmergowałem PR-y z trenowaniem/predykcją, baseline'em regex i ewaluacją modelu.
 Wygenerowałem i dodałem wyniki do ml/results/ (metryki.json, macierz pomyłek, krzywa ROC) pokazujące, że udało nam się spełnić wstępne kryteria.
+
+[Piotr Bednarski]
+Zrobiłem: przygotowałem wzorce regex na podstawie których weryfikowany jest przesyłany payload (baseline_regex.py), ewaluacja modelu (ewaluacja.py) - ocena modelu na danych testowych i przygotowanie raportu
