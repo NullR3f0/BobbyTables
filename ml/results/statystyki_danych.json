@@ -1,0 +1,38 @@
+{
+  "czyszczenie": {
+    "na_wejsciu": 44605,
+    "po_usunieciu_brakow": 44488,
+    "usuniete_sprzeczne_payloady": 2,
+    "po_deduplikacji": 41697,
+    "na_wyjsciu": 41697
+  },
+  "wspolne_payloady_train_test": 0,
+  "train": {
+    "liczba_wierszy": 33357,
+    "liczba_wg_typu": {
+      "czysty": 18444,
+      "sqli": 9055,
+      "xss": 5858
+    },
+    "odsetek_atakow": 0.4471,
+    "dlugosc_payloadu": {
+      "min": 1,
+      "mediana": 52.0,
+      "max": 5909
+    }
+  },
+  "test": {
+    "liczba_wierszy": 8340,
+    "liczba_wg_typu": {
+      "czysty": 4612,
+      "sqli": 2264,
+      "xss": 1464
+    },
+    "odsetek_atakow": 0.447,
+    "dlugosc_payloadu": {
+      "min": 1,
+      "mediana": 52.0,
+      "max": 3681
+    }
+  }
+}
