@@ -13,3 +13,7 @@ Zobowiązanie zespołu na następny sprint: wytrenowanie modelu, wnioski
 [Cyprian Tomczak]
 Zrobiłem: napisałem funkcję normalizuj w ml/normalizacja.py. Posłuży ona jako preprocesor przy uczeniu w SciKit
 W następnym tygodniu zrobię: Trenowanie modelu, testy
+
+[Cyprian Tomczak]
+Zrobiłem: napisałem trenuj_model.py, predykcja.py oraz testy do modelu w pytest
+W następnym tygodniu zrobię: ewaluację na zbiorze testowym
