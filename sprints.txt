@@ -14,6 +14,12 @@ Zobowiązanie zespołu na następny sprint: wytrenowanie modelu, wnioski
 Zrobiłem: napisałem funkcję normalizuj w ml/normalizacja.py. Posłuży ona jako preprocesor przy uczeniu w SciKit
 W następnym tygodniu zrobię: Trenowanie modelu, testy
 
+=== Sprint 16.11–21.11 ===
+
 [Cyprian Tomczak]
 Zrobiłem: napisałem trenuj_model.py, predykcja.py oraz testy do modelu w pytest
 W następnym tygodniu zrobię: ewaluację na zbiorze testowym
+
+[Stanisław Kręgielski]
+Zrobiłem: zrobiłem review i zmergowałem PR-y z trenowaniem/predykcją, baseline'em regex i ewaluacją modelu.
+Wygenerowałem i dodałem wyniki do ml/results/ (metryki.json, macierz pomyłek, krzywa ROC) pokazujące, że udało nam się spełnić wstępne kryteria.
