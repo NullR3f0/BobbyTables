@@ -1,0 +1,41 @@
+{
+  "liczba_przykladow_testowych": 8340,
+  "prog": -2.061716159210854,
+  "model": {
+    "recall": 0.9968,
+    "fpr": 0.0061,
+    "precision": 0.9925,
+    "f1": 0.9946,
+    "macierz": {
+      "TN": 4584,
+      "FP": 28,
+      "FN": 12,
+      "TP": 3716
+    },
+    "recall_wg_typu": {
+      "sqli": 0.9947,
+      "xss": 1.0
+    }
+  },
+  "baseline_regex": {
+    "recall": 0.6011,
+    "fpr": 0.08,
+    "precision": 0.8586,
+    "f1": 0.7072,
+    "macierz": {
+      "TN": 4243,
+      "FP": 369,
+      "FN": 1487,
+      "TP": 2241
+    },
+    "recall_wg_typu": {
+      "sqli": 0.3498,
+      "xss": 0.9898
+    }
+  },
+  "kryteria_sukcesu": {
+    "recall >= 0.95": true,
+    "fpr <= 0.01": true,
+    "recall - baseline >= 0.1": true
+  }
+}
